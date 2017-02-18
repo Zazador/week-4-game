@@ -44,9 +44,7 @@ $(document).ready(function(){
 		console.log("Current Score: " + currentScore);
 		if (currentScore === randomNum) {
 			gameWin();
-		} else if (currentScore < randomNum) {
-
-		} else {
+		} else if (currentScore > randomNum) {
 			gameLose();
 		}
 	}
