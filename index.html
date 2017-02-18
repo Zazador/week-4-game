@@ -2,14 +2,22 @@
 <html>
 <head>
 	<title>RPG Game</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script src="assets/javascript/game.js"></script>
+
+
 </head>
 <body>
 	<div class="container">
@@ -36,19 +44,29 @@
 
 		<!-- Random Number and Score Keeper -->
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						Random Number: 
+						<h1 id="randomNum"></h1>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-4">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						Score:<br>
-						Wins:<br>
-						Losses:
+						<h4>Score</h4>
+						<div class="panel panel-default">
+							<div class="panel-heading">Wins:</div>
+							<div class="panel-body" id="wins">
+								0
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">Losses:</div>
+							<div class="panel-body" id="losses">
+								0
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -59,16 +77,16 @@
 			<div class="col-md-8">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<button type="button" class="btn btn-default">
+						<button type="button" class="btn btn-default" id="blue">
 							<img src="assets/images/blue.png" width="100">
 						</button>
-						<button type="button" class="btn btn-default">
+						<button type="button" class="btn btn-default" id="purple">
 							<img src="assets/images/purple.png" width="100">
 						</button>
-						<button type="button" class="btn btn-default">
+						<button type="button" class="btn btn-default" id="green">
 							<img src="assets/images/green.png" width="100">
 						</button>
-						<button type="button" class="btn btn-default">
+						<button type="button" class="btn btn-default" id="yellow">
 							<img src="assets/images/yellow.png" width="100">
 						</button>
 					</div>
@@ -80,31 +98,13 @@
 		<div class="row">
 			<div class="col-md-8">
 				<div class="panel panel-default">
-				<div class="panel-heading">Total Score:</div>
-					<div class="panel-body">
+					<div class="panel-heading">Total Score:</div>
+					<div class="panel-body" id="totalScore">
 						0
 					</div>
 				</div>
 			</div>
 		</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	</div>
-
 </body>
 </html>
